@@ -1,0 +1,6 @@
+{
+  "name": "Savings Goal Tracker",
+  "description": "A beautiful, interactive 2-page app to track your savings goals, complete with Stellar Testnet wallet integration, visual progress charts, deposit history, and support for light and dark themes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
