@@ -126,11 +126,11 @@ export default function Home() {
           
           {/* Logo & Title */}
           <div className="flex items-center gap-2.5 cursor-pointer" onClick={handleBackToDashboard}>
-            <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-primary-foreground shadow-md shadow-primary/20">
+            <div className="w-9 h-9 rounded-xl vibrant-gradient-1 flex items-center justify-center text-white shadow-lg shadow-indigo-500/20">
               <TrendingUp className="w-5 h-5" />
             </div>
             <div>
-              <span className="text-base font-extrabold tracking-tight bg-gradient-to-r from-primary to-indigo-500 bg-clip-text text-transparent">
+              <span className="text-base font-extrabold tracking-tight bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                 Stellar Goals
               </span>
               <span className="hidden sm:inline text-[10px] font-mono font-bold uppercase tracking-widest text-muted-foreground block leading-none">
@@ -145,14 +145,14 @@ export default function Home() {
             {/* Wallet Info Check & Action */}
             <div className="flex items-center">
               {publicKey ? (
-                <div className="flex items-center gap-2 bg-card border border-border px-3 py-1.5 rounded-xl shadow-sm">
-                  <span className="w-2 h-2 rounded-full bg-success inline-block animate-pulse" />
-                  <span className="text-xs font-mono font-semibold text-foreground max-w-[90px] sm:max-w-none truncate">
-                    {publicKey.substring(0, 5)}...{publicKey.substring(publicKey.length - 4)}
+                <div className="flex items-center gap-2 bg-card/90 border border-border rounded-full px-4 py-1.5 shadow-sm">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse" />
+                  <span className="text-xs font-mono font-bold text-muted-foreground max-w-[90px] sm:max-w-none truncate">
+                    {publicKey.substring(0, 4)}...{publicKey.substring(publicKey.length - 4)}
                   </span>
                   <button
                     onClick={handleDisconnectWallet}
-                    className="text-[10px] font-bold text-rose-500 hover:text-rose-600 pl-1 border-l border-border transition-all"
+                    className="text-[10px] font-bold text-rose-500 hover:text-rose-600 pl-2 border-l border-border transition-all"
                     title="Disconnect Stellar Wallet"
                   >
                     Disconnect
@@ -163,7 +163,7 @@ export default function Home() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={handleConnectWallet}
-                  className="flex items-center gap-2 bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground border border-primary/20 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all shadow-sm"
+                  className="flex items-center gap-2 vibrant-gradient-blue text-white hover:opacity-95 px-4 py-2 rounded-full text-xs font-bold transition-all shadow-md shadow-blue-500/20"
                 >
                   {isConnecting ? (
                     <RefreshCw className="w-3.5 h-3.5 animate-spin" />
@@ -260,10 +260,10 @@ export default function Home() {
             >
               
               {/* Grand Overview Bento Header */}
-              <div className="relative overflow-hidden bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="relative overflow-hidden glass-card rounded-[32px] p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
                 
                 {/* Visual decoration line */}
-                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-indigo-500 to-emerald-400" />
+                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-indigo-500 via-purple-500 via-pink-500 via-amber-500 to-emerald-400" />
 
                 <div className="flex-1 space-y-4">
                   <div>
@@ -283,7 +283,7 @@ export default function Home() {
                     </div>
                     <div className="w-full bg-muted/60 h-3 rounded-full overflow-hidden border border-border/20">
                       <motion.div
-                        className="h-full bg-gradient-to-r from-primary via-indigo-500 to-success"
+                        className="h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-emerald-500"
                         initial={{ width: 0 }}
                         animate={{ width: `${overallPercentage}%` }}
                         transition={{ duration: 1.2, ease: 'easeOut' }}
@@ -294,17 +294,17 @@ export default function Home() {
 
                 {/* Circular Stats and Quick Info Metrics block */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:border-l md:border-border/60 md:pl-8 flex-shrink-0">
-                  <div className="bg-background border border-border px-4 py-3 rounded-xl flex flex-col justify-center">
+                  <div className="bg-background/80 border border-border px-4 py-3 rounded-[20px] flex flex-col justify-center shadow-sm">
                     <span className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider">Total Progress</span>
-                    <span className="text-xl font-extrabold font-mono text-primary mt-1">{overallPercentage}%</span>
+                    <span className="text-xl font-extrabold font-mono text-indigo-500 dark:text-indigo-400 mt-1">{overallPercentage}%</span>
                   </div>
-                  <div className="bg-background border border-border px-4 py-3 rounded-xl flex flex-col justify-center">
+                  <div className="bg-background/80 border border-border px-4 py-3 rounded-[20px] flex flex-col justify-center shadow-sm">
                     <span className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider">Active Goals</span>
                     <span className="text-xl font-extrabold font-mono text-foreground mt-1">{goals.length}</span>
                   </div>
-                  <div className="col-span-2 sm:col-span-1 bg-background border border-border px-4 py-3 rounded-xl flex flex-col justify-center">
+                  <div className="col-span-2 sm:col-span-1 bg-background/80 border border-border px-4 py-3 rounded-[20px] flex flex-col justify-center shadow-sm">
                     <span className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider">Completed</span>
-                    <span className="text-xl font-extrabold font-mono text-success mt-1 flex items-center gap-1">
+                    <span className="text-xl font-extrabold font-mono text-emerald-500 dark:text-emerald-400 mt-1 flex items-center gap-1">
                       {completedGoalsCount} <Trophy className="w-4 h-4 text-amber-500 inline-block animate-bounce" />
                     </span>
                   </div>
@@ -326,7 +326,7 @@ export default function Home() {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={() => setIsAddModalOpen(true)}
-                    className="flex items-center gap-2 px-4 py-2.5 bg-primary text-primary-foreground rounded-xl text-xs font-extrabold shadow-lg shadow-primary/20 hover:bg-opacity-95 transition-all"
+                    className="flex items-center gap-2 px-5 py-2.5 vibrant-gradient-1 text-white rounded-full text-xs font-extrabold shadow-lg shadow-indigo-500/20 hover:opacity-95 transition-all"
                   >
                     <Plus className="w-4 h-4" />
                     New Goal
@@ -342,7 +342,7 @@ export default function Home() {
                     </p>
                     <button
                       onClick={() => setIsAddModalOpen(true)}
-                      className="mt-4 px-4 py-2 bg-primary text-primary-foreground text-xs font-semibold rounded-xl"
+                      className="mt-4 px-5 py-2 vibrant-gradient-1 text-white text-xs font-extrabold rounded-full shadow-md shadow-indigo-500/20"
                     >
                       Create Savings Goal
                     </button>

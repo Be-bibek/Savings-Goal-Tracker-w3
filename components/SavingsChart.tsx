@@ -107,7 +107,7 @@ export function SavingsChart({ goal, deposits }: SavingsChartProps) {
   const isDark = resolvedTheme === 'dark';
 
   return (
-    <div id="savings-chart-container" className="w-full bg-card/60 backdrop-blur-md rounded-2xl p-5 border border-border flex flex-col justify-between">
+    <div id="savings-chart-container" className="w-full glass-card rounded-[32px] p-6 flex flex-col justify-between">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
         <div>
           <h3 className="text-sm font-semibold tracking-wider text-muted-foreground uppercase">

@@ -99,10 +99,10 @@ export function AddGoalModal({ isOpen, onClose }: AddGoalModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 15 }}
             transition={{ type: 'spring', duration: 0.4 }}
-            className="relative w-full max-w-lg bg-card border border-border p-6 rounded-2xl shadow-2xl z-50 overflow-hidden"
+            className="relative w-full max-w-lg glass-card p-6 rounded-[32px] shadow-2xl z-50 overflow-hidden"
           >
             {/* Header decor */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-purple-500 to-primary" />
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 via-pink-500 via-amber-500 to-emerald-400" />
 
             <div className="flex justify-between items-center mb-5">
               <div className="flex items-center gap-2">
@@ -225,13 +225,13 @@ export function AddGoalModal({ isOpen, onClose }: AddGoalModalProps) {
                 <button
                   type="button"
                   onClick={onClose}
-                  className="flex-1 py-3 text-sm font-semibold rounded-xl border border-border hover:bg-muted text-muted-foreground hover:text-foreground transition-all"
+                  className="flex-1 py-3 text-sm font-semibold rounded-full border border-border hover:bg-muted text-muted-foreground hover:text-foreground transition-all"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 py-3 text-sm font-semibold rounded-xl bg-primary text-primary-foreground hover:bg-opacity-90 transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20"
+                  className="flex-1 py-3 text-sm font-semibold rounded-full bg-primary text-primary-foreground hover:bg-opacity-90 transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20"
                 >
                   <Plus className="w-4 h-4" />
                   Save Goal

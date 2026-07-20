@@ -98,7 +98,7 @@ export function GoalCard({ goal, onSelect }: GoalCardProps) {
       whileHover={{ scale: 1.02, y: -4 }}
       whileTap={{ scale: 0.98 }}
       onClick={() => onSelect(goal.id)}
-      className={`relative glass-panel cursor-pointer rounded-2xl p-6 border border-border flex flex-col justify-between overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${colors.glow}`}
+      className={`relative glass-card cursor-pointer rounded-[28px] p-6 border border-border/80 flex flex-col justify-between overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${colors.glow}`}
     >
       {/* Decorative Shimmer and Corner highlights */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-20" />

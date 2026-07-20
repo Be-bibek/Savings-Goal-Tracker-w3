@@ -72,6 +72,54 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Glass Card from Vibrant Palette */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.dark .glass-card {
+  background: rgba(18, 24, 36, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+/* Vibrant Gradients */
+.vibrant-gradient-1 {
+  background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%);
+}
+
+.vibrant-gradient-2 {
+  background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+}
+
+.vibrant-gradient-3 {
+  background: linear-gradient(135deg, #10B981 0%, #3B82F6 100%);
+}
+
+.vibrant-gradient-blue {
+  background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+}
+
+/* Float animation from Vibrant Palette */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .shimmer-bg {
   background: linear-gradient(
     90deg,

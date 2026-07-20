@@ -219,7 +219,7 @@ export function GoalDetailView({ goalId, onBack }: GoalDetailViewProps) {
       <div className="flex items-center justify-between">
         <button
           onClick={onBack}
-          className="group flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-foreground bg-card border border-border px-4 py-2.5 rounded-xl transition-all shadow-sm"
+          className="group flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-foreground bg-card/90 border border-border px-4 py-2 rounded-full transition-all shadow-sm"
         >
           <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
           Back to Dashboard
@@ -232,18 +232,18 @@ export function GoalDetailView({ goalId, onBack }: GoalDetailViewProps) {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                className="absolute right-0 top-0 z-10 bg-card border border-rose-500/30 rounded-xl p-3 shadow-lg flex items-center gap-2 w-max"
+                className="absolute right-0 top-0 z-10 bg-card border border-rose-500/30 rounded-full p-3 shadow-lg flex items-center gap-2 w-max"
               >
                 <span className="text-xs font-semibold text-rose-500">Confirm Delete?</span>
                 <button
                   onClick={handleDeleteConfirm}
-                  className="px-2.5 py-1 bg-rose-600 hover:bg-rose-500 text-white rounded-md text-xs font-semibold transition-all"
+                  className="px-2.5 py-1 bg-rose-600 hover:bg-rose-500 text-white rounded-full text-xs font-semibold transition-all"
                 >
                   Yes
                 </button>
                 <button
                   onClick={() => setShowConfirmDelete(false)}
-                  className="px-2.5 py-1 bg-muted hover:bg-muted/80 text-foreground rounded-md text-xs font-semibold border border-border transition-all"
+                  className="px-2.5 py-1 bg-muted hover:bg-muted/80 text-foreground rounded-full text-xs font-semibold border border-border transition-all"
                 >
                   No
                 </button>
@@ -251,7 +251,7 @@ export function GoalDetailView({ goalId, onBack }: GoalDetailViewProps) {
             ) : (
               <button
                 onClick={() => setShowConfirmDelete(true)}
-                className="flex items-center gap-2 text-xs font-semibold text-rose-500 hover:text-rose-600 hover:bg-rose-500/10 border border-rose-500/20 px-3 py-2 rounded-xl transition-all"
+                className="flex items-center gap-2 text-xs font-bold text-rose-500 hover:text-rose-600 hover:bg-rose-500/10 border border-rose-500/20 px-4 py-2 rounded-full transition-all"
               >
                 <Trash2 className="w-4 h-4" />
                 Delete Goal
@@ -262,7 +262,7 @@ export function GoalDetailView({ goalId, onBack }: GoalDetailViewProps) {
       </div>
 
       {/* Hero Header Card */}
-      <div className={`relative overflow-hidden rounded-2xl border border-border bg-card p-6 md:p-8 shadow-xl bg-gradient-to-b ${colors.bgGlow}`}>
+      <div className={`relative overflow-hidden glass-card rounded-[32px] p-6 md:p-8 shadow-xl bg-gradient-to-b ${colors.bgGlow}`}>
         {/* Animated grid lines background pattern */}
         <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px]" />
         
@@ -339,10 +339,10 @@ export function GoalDetailView({ goalId, onBack }: GoalDetailViewProps) {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             
             {/* Stat Card 1 */}
-            <div className="bg-card/60 backdrop-blur-md border border-border rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div className="glass-card rounded-[24px] p-5 flex flex-col justify-between">
               <div className="flex items-center justify-between">
                 <span className="text-xs text-muted-foreground font-bold uppercase tracking-wider">Total Saved</span>
-                <div className="p-2 bg-emerald-500/10 text-emerald-500 rounded-lg">
+                <div className="p-2 bg-emerald-500/10 text-emerald-500 rounded-xl">
                   <DollarSign className="w-4 h-4" />
                 </div>
               </div>
@@ -357,10 +357,10 @@ export function GoalDetailView({ goalId, onBack }: GoalDetailViewProps) {
             </div>
 
             {/* Stat Card 2 */}
-            <div className="bg-card/60 backdrop-blur-md border border-border rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div className="glass-card rounded-[24px] p-5 flex flex-col justify-between">
               <div className="flex items-center justify-between">
                 <span className="text-xs text-muted-foreground font-bold uppercase tracking-wider">Remaining</span>
-                <div className="p-2 bg-rose-500/10 text-rose-500 rounded-lg">
+                <div className="p-2 bg-rose-500/10 text-rose-500 rounded-xl">
                   <Flame className="w-4 h-4" />
                 </div>
               </div>
@@ -375,10 +375,10 @@ export function GoalDetailView({ goalId, onBack }: GoalDetailViewProps) {
             </div>
 
             {/* Stat Card 3 */}
-            <div className="bg-card/60 backdrop-blur-md border border-border rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div className="glass-card rounded-[24px] p-5 flex flex-col justify-between">
               <div className="flex items-center justify-between">
                 <span className="text-xs text-muted-foreground font-bold uppercase tracking-wider">Avg. Contribution</span>
-                <div className="p-2 bg-indigo-500/10 text-indigo-500 rounded-lg">
+                <div className="p-2 bg-indigo-500/10 text-indigo-500 rounded-xl">
                   <Layers className="w-4 h-4" />
                 </div>
               </div>
@@ -395,7 +395,7 @@ export function GoalDetailView({ goalId, onBack }: GoalDetailViewProps) {
           </div>
 
           {/* Deposit History Log (Desktop: Bottom of left column) */}
-          <div className="bg-card/60 backdrop-blur-md border border-border rounded-2xl p-6 shadow-sm">
+          <div className="glass-card rounded-[32px] p-6">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-primary" />
@@ -466,8 +466,8 @@ export function GoalDetailView({ goalId, onBack }: GoalDetailViewProps) {
         {/* Right Column - Add Funds Form (1 col wide) */}
         <div className="lg:col-span-1 space-y-6">
           
-          <div className="bg-card border border-border rounded-2xl p-6 shadow-md relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-primary to-indigo-500" />
+          <div className="glass-card rounded-[32px] p-6 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 via-pink-500 via-amber-500 to-emerald-400" />
             
             <h3 className="text-md font-bold tracking-tight text-foreground flex items-center gap-1.5 mb-1">
               💰 Add Funds
