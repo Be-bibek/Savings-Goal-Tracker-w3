@@ -2,7 +2,12 @@
 
 A stunning, responsive, and friendly 2-page **Savings Goal Tracker** application that combines modern financial planning with on-chain Stellar blockchain transparency. Track your goals, visualize deposits, and interact with the **Stellar Testnet** using our built-in wallet kit.
 
-![Home Screen](https://picsum.photos/seed/savings_goal_tracker/1200/630)
+**Home Screen**
+<img width="1278" height="638" alt="image" src="https://github.com/user-attachments/assets/60ab2a6b-fdbe-4236-800b-86ad9212a90c" /> 
+
+**Home Screen -  mobile view light mode**<img width="269" height="497" alt="image" src="https://github.com/user-attachments/assets/e0967661-bb6d-43cc-8761-cc6edadf707e" />
+
+**Home Screen -  mobile view dark mode** <img width="271" height="499" alt="image" src="https://github.com/user-attachments/assets/adbd602d-cbe3-44e6-9601-23e2bd29b121" />
 
 ## ✨ Key Features
 
@@ -61,4 +66,4 @@ Ensure you have [Node.js](https://nodejs.org/) (v18.0.0 or higher) installed.
 
 ---
 
-*Made with 💖 by the Savings Goal Tracker Engineering Team*
+*Made with 💖 by the Savings Goal Tracker Engineering Team* ![Home Screen](https://picsum.photos/seed/savings_goal_tracker/1200/630)
